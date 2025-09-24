@@ -7,20 +7,21 @@ public class Main {
         while (true) {
             clearScreen();
 
-            System.out.println(" \t\t\t\t\t hello dear in our calculator ");
-            System.out.println(" \t\t\t\t\t [ +     -       *       / ] ");
-            System.out.println(" \t\t\t\t\t [ 0     1       2       3 ]  ");
-            System.out.println(" \t\t\t\t\t [ 4     5       6       7 ]  ");
-            System.out.println(" \t\t\t\t\t [ 8     9       %         ]  ");
-            System.out.println(" \t\t\t\t\t enter first number: ");
+            // عنوان ملون
+            System.out.println(ColorsExample.CYAN + "\t\t\t\t\t Hello dear in our calculator " + ColorsExample.RESET);
+            System.out.println(ColorsExample.YELLOW + "\t\t\t\t\t [ +     -       *       / ] " + ColorsExample.RESET);
+            System.out.println(ColorsExample.YELLOW + "\t\t\t\t\t [ 0     1       2       3 ] " + ColorsExample.RESET);
+            System.out.println(ColorsExample.YELLOW + "\t\t\t\t\t [ 4     5       6       7 ] " + ColorsExample.RESET);
+            System.out.println(ColorsExample.YELLOW + "\t\t\t\t\t [ 8     9       %         ] " + ColorsExample.RESET);
 
+            System.out.println(ColorsExample.GREEN + "\t\t\t\t\t Enter first number: " + ColorsExample.RESET);
             int num1 = input.nextInt();
             input.nextLine(); // تنظيف البافر
 
-            System.out.println(" \t\t\t\t\t enter operator (+, -, *, /, %): ");
+            System.out.println(ColorsExample.GREEN + "\t\t\t\t\t Enter operator (+, -, *, /, %): " + ColorsExample.RESET);
             String op = input.nextLine();
 
-            System.out.println(" \t\t\t\t\t enter second number: ");
+            System.out.println(ColorsExample.GREEN + "\t\t\t\t\t Enter second number: " + ColorsExample.RESET);
             int num2 = input.nextInt();
             input.nextLine(); // تنظيف البافر
 
@@ -41,7 +42,7 @@ public class Main {
                     mod(num1, num2);
                     break;
                 default:
-                    System.out.println("\t\t\t\t\t invalid operator");
+                    System.out.println(ColorsExample.RED + "\t\t\t\t\t Invalid operator!" + ColorsExample.RESET);
             }
 
             System.out.println("\nPress Enter to continue...");
@@ -51,35 +52,34 @@ public class Main {
 
     static void add(int a, int b) {
         int sum = a + b;
-        System.out.println("\t\t\t\t\t the sum is: " + sum);
+        System.out.println(ColorsExample.BLUE + "\t\t\t\t\t The sum is: " + sum + ColorsExample.RESET);
     }
 
     static void sub(int a, int b) {
         int sub = a - b;
-        System.out.println("\t\t\t\t\t the subtraction is: " + sub);
+        System.out.println(ColorsExample.BLUE + "\t\t\t\t\t The subtraction is: " + sub + ColorsExample.RESET);
     }
 
     static void mul(int a, int b) {
         int mul = a * b;
-        System.out.println("\t\t\t\t\t the multiplication is: " + mul);
+        System.out.println(ColorsExample.BLUE + "\t\t\t\t\t The multiplication is: " + mul + ColorsExample.RESET);
     }
 
     static void div(int a, int b) {
         if (b != 0) {
             int div = a / b;
-            System.out.println("\t\t\t\t\t the division is: " + div);
+            System.out.println(ColorsExample.BLUE + "\t\t\t\t\t The division is: " + div + ColorsExample.RESET);
         } else {
-            System.out.println("\t\t\t\t\t can't divide by zero!");
+            System.out.println(ColorsExample.RED + "\t\t\t\t\t Can't divide by zero!" + ColorsExample.RESET);
         }
     }
 
     static void mod(int a, int b) {
         int mod = a % b;
-        System.out.println("\t\t\t\t\t the modulus is: " + mod);
+        System.out.println(ColorsExample.BLUE + "\t\t\t\t\t The modulus is: " + mod + ColorsExample.RESET);
     }
 
     static void clearScreen() {
-        // طباعة أسطر كتير كبديل للـ clear
         for (int i = 0; i < 50; i++) {
             System.out.println();
         }
